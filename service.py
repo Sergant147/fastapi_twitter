@@ -24,7 +24,7 @@ class Service:
         return self.database.read_messages()
 
     def add_student(self, name, age, details):
-        student = Student(self.last_id + 1, 0, "", 0, name, int(age), details, False)
+        student = Student(self.last_id + 1, 0, "", 0, name, int(age), details)
         self.database.add_student(student)
         self.last_id += 1
         return student
